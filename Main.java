@@ -1,4 +1,5 @@
 import java.util.*;
+
 /*
 @version 0.1
 -still need to add:
@@ -11,8 +12,9 @@ import java.util.*;
 */
 class Main {
   public static void main(String[] args) {
-    moneyShit totalDue = new moneyShit();
+    moneyStuff totalDue = new moneyStuff();
     Scanner input = new Scanner(System.in);
+    ArrayList<String> pizza = new ArrayList<String>();
     System.out.println("welcome to generic slightly racist pizza shop!");
     System.out.println("To start your order, press enter.");
     wait(690);
@@ -23,6 +25,7 @@ class Main {
     // make that work somehow
     int sizeSelection = 0;
     int gate1 = 0;
+    String sizeString = "null";
     do {
       System.out.println("1.Small-$4, 2. Medium- $6, 3.Large- $9, 4. Obese American-$14.");
       System.out.println("please enter a number.");
@@ -33,7 +36,6 @@ class Main {
         continue;
       }
 
-      String sizeString;
       switch (sizeSelection) {
       case 1:
         sizeString = "Small";
@@ -58,6 +60,7 @@ class Main {
       } else {
         gate1 = 0;
       }
+      System.out.println("You have selected " + sizeString);
     } while (gate1 == 1);
     System.out.println("Now let's make your pizza a pizza~!");
     wait(690);
@@ -107,11 +110,13 @@ class Main {
         case 3:
           crustType = "Thin Crust";
           totalDue.total(0.5);
+          continue;
         case 4:
           crustType = "Gluten Free";
           totalDue.total(3);
-          // possibly add default if extraneous number prevention doesnt like an if
-          // statement or you're being lazy
+          continue;
+        // possibly add default if extraneous number prevention doesnt like an if
+        // statement or you're being lazy
         }
       case 2:
         System.out.println("Pick a cheese.");
@@ -135,18 +140,21 @@ class Main {
         switch (cheeseSelection) {
         case 1:
           cheeseType = "Mozzarella";
-
+          continue;
         case 2:
           cheeseType = "Provolone";
           totalDue.total(0.25);
+          continue;
         case 3:
           cheeseType = "Havarti";
           totalDue.total(0.5);
+          continue;
         case 4:
           cheeseType = "Dairy Free (Daiya Brand)";
           totalDue.total(1);
-          // possibly add default if extraneous number prevention doesnt like an if
-          // statement or you're being lazy
+          continue;
+        // possibly add default if extraneous number prevention doesnt like an if
+        // statement or you're being lazy
         }
       case 3:
         System.out.println("Pick a meat.");
@@ -170,19 +178,24 @@ class Main {
         switch (meatSelection) {
         case 1:
           meatType = "Pepperoni";
+          continue;
         case 2:
           meatType = "Sausage";
           totalDue.total(0.5);
+          continue;
         case 3:
           meatType = "bacon";
           totalDue.total(0.69);
+          continue;
         case 4:
           meatType = "bacon from canada";
           totalDue.total(1);
+          continue;
         case 5:
           meatType = "no meat";
-          // possibly add default if extraneous number prevention doesnt like an if
-          // statement or you're being lazy
+          continue;
+        // possibly add default if extraneous number prevention doesnt like an if
+        // statement or you're being lazy
         }
       case 4:
         System.out.println("Pick vegetables.");
@@ -208,18 +221,24 @@ class Main {
         switch (vegSelection) {
         case 1:
           vegType = "mushroom";
+          continue;
         case 2:
           vegType = "roma tomatoes";
+          continue;
         case 3:
           vegType = "olives";
+          continue;
         case 4:
           vegType = "green bell peppers";
+          continue;
         case 5:
           vegType = "artichokes";
-          // possibly add default if extraneous number prevention doesnt like an if
-          // statement or you're being lazy
+          continue;
+        // possibly add default if extraneous number prevention doesnt like an if
+        // statement or you're being lazy
         case 6:
           vegType = "no vegetables";
+          continue;
         }
       case 5:
         System.out.println("Thank you!");
