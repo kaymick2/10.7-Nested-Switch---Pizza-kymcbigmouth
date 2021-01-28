@@ -1,5 +1,13 @@
 import java.util.*;
-
+/*
+@version 0.1
+-still need to add:
+-money total outputs at each step
+-remove profanity
+-add outputs of what you've ordered
+-add payment menu (credit card info, etc)
+-save stuff to a file?
+*/
 class Main {
   public static void main(String[] args) {
     moneyShit totalDue = new moneyShit();
