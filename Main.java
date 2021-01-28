@@ -7,6 +7,7 @@ import java.util.*;
 -add outputs of what you've ordered
 -add payment menu (credit card info, etc)
 -save stuff to a file?
+-add ability to select multiple things
 */
 class Main {
   public static void main(String[] args) {
